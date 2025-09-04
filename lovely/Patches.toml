@@ -1,0 +1,113 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Jokers.lua functionality
+
+# Empty Antes
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = '''
+if ante < 1 then return 100 end
+if ante <= 8 then return amounts[ante] end
+local a, b, c, d = amounts[8],1.6,ante-8, 1 + 0.2*(ante-8)
+local amount = math.floor(a*(b+(k*c)^d)^c)
+amount = amount - amount%(10^math.floor(math.log10(amount)-1))
+'''
+position = "at"
+payload = "amount = 1"
+match_indent = true
+overwrite = true
+times = 3
+
+# Discard and Hands Patch 
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = '''
+discards = 3,
+hands = 4,
+'''
+position = "at"
+payload = '''
+discards = 1,
+hands = 1,
+'''
+match_indent = true
+overwrite = true
+times = 1
+
+# Small & Big Blind Patch
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''
+bl_small =           {name = 'Small Blind',  defeated = false, order = 1, dollars = 3, mult = 1,  vars = {}, debuff_text = '', debuff = {}, pos = {x=0, y=0}},
+bl_big =             {name = 'Big Blind',    defeated = false, order = 2, dollars = 4, mult = 1.5,vars = {}, debuff_text = '', debuff = {}, pos = {x=0, y=1}},
+'''
+position = "at"
+payload = '''
+bl_small =           {name = 'Small Blind',  defeated = false, order = 1, dollars = 2, mult = 1,  vars = {}, debuff_text = '', debuff = {}, pos = {x=0, y=0}},
+bl_big =             {name = 'Big Blind',    defeated = false, order = 2, dollars = 2, mult = 1,vars = {}, debuff_text = '', debuff = {}, pos = {x=0, y=1}},
+'''
+match_indent = true
+overwrite = true
+times = 1
+
+
+#Infinite Small Blind Patch
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+G.GAME.round_resets.blind_states = G.GAME.round_resets.blind_states or {Small = 'Select', Big = 'Upcoming', Boss = 'Upcoming'}
+if G.GAME.round_resets.blind_states.Boss == 'Defeated' then
+    G.GAME.round_resets.blind_states.Small = 'Upcoming'
+    G.GAME.round_resets.blind_states.Big = 'Upcoming'
+    G.GAME.round_resets.blind_states.Boss = 'Upcoming'
+    G.GAME.blind_on_deck = 'Small'
+    G.GAME.round_resets.blind_choices.Boss = get_new_boss()
+    G.GAME.round_resets.boss_rerolled = false
+end
+'''
+position = "at"
+payload = '''
+if G.GAME.round_resets.blind_states.Boss == 'Defeated' then
+    G.GAME.blind_on_deck = 'Small'
+    G.GAME.round_resets.blind_choices.Boss = get_new_boss()
+    G.GAME.round_resets.boss_rerolled = false
+end
+G.GAME.round_resets.blind_states = {Small = 'Select', Big = 'Upcoming', Boss = 'Upcoming'}
+'''
+match_indent = true
+overwrite = true
+times = 1
+
+#press t to go to to shop patch
+[[patches]]
+[patches.pattern]
+target = "engine/controller.lua"
+pattern = '''
+if key == "space" then
+    live_test()
+end
+'''
+position = "after"
+payload = '''
+if key == "t" then
+    if G.STATE == G.STATES.BLIND_SELECT then
+        G.blind_select:remove()
+        G.blind_prompt_box:remove()        
+        G.blind_select = nil
+        
+        G.STATE = G.STATES.SHOP
+        G.GAME.shop_free = nil
+        G.GAME.shop_d6ed = nil
+        G.STATE_COMPLETE = false     
+    end
+end
+'''
+match_indent = true
+overwrite = false

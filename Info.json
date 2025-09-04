@@ -1,0 +1,10 @@
+{
+    "id": "TTRPG",
+    "name": "TTRPG Rougelike",
+    "author": ["Moothy"],
+    "description": "An addon mod to play the TTRPG Rouglike as \"El Casinontle\"",
+    "prefix": "ttrpg",
+    "main_file" : "main.lua",
+    "badge_colour": "CCCCFF",
+    "badge_text_colour": "000000"
+}
