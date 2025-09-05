@@ -11,12 +11,27 @@ return {
                 }
             },
 
+            j_ttrpg_athletic = {
+                name = 'Athletic Joker',
+                text = {
+                    "{C:attention}+1{} movement action"
+                }
+            },
+
             j_ttrpg_berserk = {
                 name = "Berserk",
                 text = {
                     "Refresh an attack action",
                     "after defeating a target with a hand",
                     "(Legendary)"
+                }
+            },
+
+            j_ttrpg_black_knight = {
+                name = 'Black Knight',
+                text = {
+                    "You can't be {C:red}injured{}",
+                    "{s:0.8,C:inactive}'Tis but a scratch{}"
                 }
             },
 
@@ -29,10 +44,27 @@ return {
                 }
             },
 
+            j_ttrpg_chonky = {
+                name = "Chonky Joker",
+                text = {
+                    "Gives {C:attention}500{} health"
+                }
+            },
+
+            j_ttrpg_confident = {
+                name = "Confident Joker",
+                text = {
+                    "-100 health,",
+                    "if you do not defeat", 
+                    "an enemy in a blind,",
+                    "+100 if you do"
+                }
+            },
+
             j_ttrpg_cool_guy = {
                 name = "Cool Guy",
                 text = {
-                    "Immune to explosive damage"
+                    "Become immune to explosive damage"
                 }
             },
 
@@ -69,7 +101,7 @@ return {
             j_ttrpg_fairy = {
                 name = "A Fairy's Hunger",
                 text = {
-                    "Heal all the damage you deal,",
+                    "Heals all the damage you deal,",
                     "If you do not attack this cycle",
                     "you take {C:attention}1000 damage{}", 
                     "at the start of your next turn",
@@ -78,11 +110,55 @@ return {
                 }
             },
 
+            j_ttrpg_fisherman = {
+                name = "Fisherman",
+                text = {
+                    "Adds a {C:attention}fish{}",
+                    "to your inventory",
+                    "at the start of each turn"
+                }
+            },
+
             j_ttrpg_friendly = {
                 name = 'Friendly joker',
                 text = {
-                    "Gain {X:mult,C:white}X0.25{} Mult",
+                    "Gives {X:mult,C:white}X0.25{} Mult",
                     "for each ally in an adjacent space"
+                }
+            },
+
+            j_ttrpg_furious = {
+                name = 'Furious Joker',
+                text = {
+                    "{X:mult,C:white}X1.5{} Mult",
+                    "if you are within your injure threshold"
+                }
+            },
+
+            j_ttrpg_guardian = {
+                name = 'Reckless Guardian',
+                text = {
+                    "Gives a {C:attention}shield{}",
+                    "equal to {C:attention}damage{} dealt,",
+                    "At the start of your next turn",
+                    "Excess shield is dealt", 
+                    "as damage to your {C:attention}health{}"
+                }
+            },
+
+            j_ttrpg_hungry = {
+                name = 'Hungry Joker',
+                text = {
+                    "Eats 1 item in your bag",
+                    "at the end of each round,",
+                    "gives {C:red}100 health{} per size"
+                }  
+            },
+
+            j_ttrpg_interrupting_cow = {
+                name = 'Interrupting Cow',
+                text = {
+                    "Gives {C:money}$1{} each time you tag-in"
                 }
             },
 
@@ -94,12 +170,29 @@ return {
                 }
 
             },
+
+            j_ttrpg_jarrito = {
+                name = 'Jarrito',
+                text = {
+                    "All items",
+                    "take up {C:attention}1{} bag space"
+                }
+            },
+
+            j_ttrpg_lanky = {
+                name = 'Lanky Joker',
+                text = {
+                    "You can attack from a",
+                    "{C:attention}3{} space range"
+                }
+            },
             
             j_ttrpg_library_card = {
                 name = "Library Card",
                 text = {
                     "Once per shop,",
-                    "choose a ware to persist in the next shop"
+                    "choose a ware to persist",
+                    "in the next shop"
                 }
             },
 
@@ -114,25 +207,56 @@ return {
             j_ttrpg_negotiator = {
                 name = "Negotiator",
                 text = {
-                    "Allows you to swap a joker with one in the shop"
+                    "Allows you to swap",
+                    " a {C:attention}Joker{} with one in the shop"
                 }
             },
 
             j_ttrpg_nuts = {
                 name = "Nuts Joker",
                 text = {
-                    "Get a belt with 8 inventory space",
+                    "Get a belt with",
+                    "{C:attention}8{} inventory space",
                     "(Legendary)"
                     
+                }
+            },
+
+            j_ttrpg_optimizer = {
+                name = 'Optimized Joker',
+                text = {
+                    "{X:mult,C:white}X1.5{} mult", 
+                    "if you've used all your movement",
+                    "and it is the shortest", 
+                    "path to your destination"
+                }
+            },
+
+            j_ttrpg_reliable = {
+                name = "Ol' Reliable",
+                text = {
+                    "{C:chips}+#1#{} chips"
                 }
             },
 
             j_ttrpg_scorpion = {
                 name = "Scorpion Joker",
                 text = {
-                    "You can attack in a 5 space line,",
-                    "Enemies are pulled towards you,",
+                    "You can attack in a",
+                    "{C:attention}5{} space line,",
+                    "Enemies are pulled",
+                    "towards you,",
                     "-1 item use"
+                }
+            },
+
+            j_ttrpg_sea_puppy = {
+                name = "Sea Puppy",
+                text = {
+                    "{C:green}1 in 4{} chance to apply",
+                    "a random {C:attention}seal{} on the",
+                    "first card in your hand",
+                    "at the start of each round"
                 }
             },
 
@@ -157,7 +281,27 @@ return {
             j_ttrpg_statue = {
                 name = 'Statue',
                 text = {
-                    "Gain {C:blue}+5{} chips for each space of movement not taken"
+                    "Gain {C:blue}+5{} chips",
+                    "for each space of",
+                    "movement not taken"
+                }
+            },
+
+            j_ttrpg_strongman = {
+                name = 'Strongman',
+                text = {
+                    "Carrying an ally costs {C:attention}1{} item use,",
+                    "Carrying only needs {C:attention}1{} hand free,",
+                    "Putting an ally down is {C:attention}free{}"
+                }
+            },
+
+            j_ttrpg_the_count = {
+                name = "The Count",
+                text = {
+                    "Each played {C:attention}#1#{}",
+                    "gives {C:money}$1{}",
+                    "(Rank increases each trigger)"
                 }
             },
 
