@@ -1,62 +1,27 @@
 --- TODO
 --- Change confident joker name
---- Modify Cartomancer & Mr. Bones
+--- Modify Cartomancer, Mr. Bones, Golden Joker, Perkeo
 --- Add buttons/bars to jokers for ttrpg
 SMODS.Joker{
 	key = 'zoomer',
-	loc_txt = {
-		name = 'zoomer',
-		text = {
-			'Gives a {C:blue}movement action{},',
-			'which allows you travel',
-			'exactly {C:attention}5{} spaces in a line'
-		}
-	
-	},
 	atlas = 'Jokers',
 	pos = {x = 0, y = 0}
-	
 }
 
 SMODS.Joker{
 	key = 'light_traveller',
-	loc_txt = {
-		name = 'Light Traveller',
-		text = {
-			"Removes all inventory space,",
-			"gives 7 item uses "  
-		}
-	
-	},
 	atlas = 'Jokers',
 	pos = {x = 0, y = 0}
-	
 }
 
 SMODS.Joker{
 	key = 'econo',
-	loc_txt = {
-		name = 'Economic Joker',
-		text = {
-			"Unused item uses are conserved between turns",
-			"(Only get 2 item uses per turn(if needs a downside))"
-		}
-	
-	},
 	atlas = 'Jokers',
 	pos = {x = 0, y = 0}
-	
 }
 
 SMODS.Joker{
 	key = 'friendly',
-	loc_txt = {
-		name = 'Friendly joker',
-		text = {
-			"Gain .25x mult for each ally in an adjacent space"
-		}
-	
-	},
 	atlas = 'Jokers',
 	pos = {x = 0, y = 0}
 	
@@ -64,13 +29,6 @@ SMODS.Joker{
 
 SMODS.Joker{ --- Make image be the statue of david
 	key = 'statue',
-	loc_txt = {
-		name = 'Statue',
-		text = {
-			"Gain {C:blue}+5{} chips for each space of movement not taken"
-		}
-	
-	},
 	atlas = 'Jokers',
 	pos = {x = 0, y = 0}
 	
@@ -200,9 +158,9 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-	key = 'strongman',
+	key = 'optimizer',
 	loc_txt = {
-		name = 'Strongman',
+		name = 'Optimized Joker',
 		text = {
 			"{C:mult}x1.5{} mult if you've used all your movement",
 			"and it is the shortest path to your destination"
@@ -218,22 +176,7 @@ SMODS.Joker{
 	loc_txt = {
 		name = "Ol' Reliable",
 		text = {
-			"{C:chips}+20{} chips"
-		}
-	},
-
-	atlas = 'Jokers',
-	pos = {x = 0, y = 0}
-}
-
-SMODS.Joker{
-	key = "confident",
-	loc_txt = {
-		name = "Confident Joker",
-		text = {
-			"Lose 100 health,",
-			"if you do not defeat an enemy with your hand,",
-			"gain 100 if you do"
+			"{C:chips}+#1#{} chips"
 		}
 	},
 
@@ -311,5 +254,83 @@ SMODS.Joker{
 	},
 
 	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "scorpion",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "library_card",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "negotiator",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "selective_buyer",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "bottom_line",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "deadly_weight",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "sickly",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "cool_guy",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "fairy",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "jaja",
+	atlas = 'Jokers',
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "dragonstone",
+	atlas = "Jokers",
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "berserk",
+	atlas = "Jokers",
+	pos = {x = 0, y = 0}
+}
+
+SMODS.Joker{
+	key = "nuts",
+	atlas = "Jokers",
 	pos = {x = 0, y = 0}
 }
