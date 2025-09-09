@@ -312,9 +312,9 @@ return {
             j_ttrpg_the_count = {
                 name = "The Count",
                 text = {
-                    "Each played {C:attention}#1#{}",
-                    "gives {C:money}$1{}",
-                    "(Rank increases each trigger)"
+                    "Each scored {C:attention}#2#{}",
+                    "gives {C:money}$#1#{}",
+                    "{C:inactive}(Rank increases each trigger){}"
                 }
             },
 

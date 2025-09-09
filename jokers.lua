@@ -170,7 +170,53 @@ SMODS.Joker{
 SMODS.Joker{
 	key = "the_count",
 	atlas = 'Jokers',
-	pos = {x = 0, y = 0}
+	pos = {x = 0, y = 0},
+	config = {extra = {dollars = 1, count_rank_index = 1}},
+	loc_vars = function(self, info_queue, card)
+
+		local count_rank = self.find_rank_name(card.ability.extra.count_rank_index)
+		return {vars = {card.ability.extra.dollars, count_rank}}
+	end,
+	
+	calculate = function(self, card, context)
+		if context.individual and context.cardarea == G.play then
+			local current_card_rank = context.other_card.base.value
+			local count_rank = self.find_rank_name(card.ability.extra.count_rank_index)
+
+			if current_card_rank == count_rank then
+				if card.ability.extra.count_rank_index == 13 then
+					card.ability.extra.count_rank_index = 1
+				else
+					card.ability.extra.count_rank_index = card.ability.extra.count_rank_index + 1
+				end
+				return{
+					message = count_rank.."!",
+					dollars = 1
+				}
+
+			end
+
+		end
+	end,
+
+	find_rank_name = function(index)
+		local rank_table = {
+			"Ace",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"10",
+			"Jack",
+			"Queen",
+			"King"
+		}
+		return rank_table[index]
+	end
 }
 
 
