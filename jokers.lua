@@ -124,7 +124,40 @@ SMODS.Joker{
 SMODS.Joker{
 	key = "sea_puppy",
 	atlas = 'Jokers',
-	pos = {x = 0, y = 0}
+	pos = {x = 0, y = 0},
+
+    config = { extra = { odds = 1 } },
+    loc_vars = function(self, info_queue, card)
+		local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, "sea_puppy")
+		return { vars = {numerator, denominator}}
+    end,
+
+    calculate = function(self, card, context)
+
+        if context.after and context.cardarea == G.jokers then
+			if SMODS.pseudorandom_probability(card, "sea_puppy", 1, card.ability.extra.odds) then
+				
+				local random_seal = SMODS.poll_seal({guaranteed = true})
+				local first_card = context.full_hand[1]
+				
+				G.E_MANAGER:add_event(Event({
+					trigger = 'immediate',
+					func = function()
+						play_sound('tarot1')
+						first_card:set_seal(random_seal, nil, true)
+						return true
+					end
+				}))
+
+				return{
+					message = localize("k_seal_ex")
+				}
+
+			end
+        end
+    end
+
+
 }
 
 

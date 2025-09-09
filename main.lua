@@ -53,18 +53,10 @@ SMODS.Blind{
 	discovered = true,
 	dollars = 2,
 	mult = 1,
-	boss_colour = HEX('FF0000'),
-	boss = {min = 1, max = 10},
-	loc_txt = {
-		name = 'The Amogus',
-		text = {
-			"Is {C:red}sus{}"
-		}	
-	},
-
+	boss = {},
 	ignore_showdown_check = true,
-
+	boss_colour = HEX('FF0000'),
 	in_pool = function(self)
 		return true
-		end
+	end
 }

@@ -1,6 +1,19 @@
 return {
     descriptions = {
+
+        Blind = {
+
+            bl_ttrpg_amogus = {
+                name = 'The Amogus',
+                text = {
+                    "Is {C:red}sus{}"
+                }	
+            }
+            
+        },
+
         Joker = {
+
             j_perkeo = {
                 name = "Perkeo",
                 text = {
@@ -253,10 +266,10 @@ return {
             j_ttrpg_sea_puppy = {
                 name = "Sea Puppy",
                 text = {
-                    "{C:green}1 in 4{} chance to apply",
+                    "{C:green}#1# in #2#{} chance to apply",
                     "a random {C:attention}seal{} on the",
-                    "first card in your hand",
-                    "at the start of each round"
+                    "first played card,",
+                    "at end of hand"
                 }
             },
 
@@ -314,6 +327,11 @@ return {
                 }
             }
 
+        }
+    },
+    misc = {
+        dictionary = {
+            k_seal_ex = "Seal!"
         }
     }
 }
