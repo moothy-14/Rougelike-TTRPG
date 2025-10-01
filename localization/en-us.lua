@@ -332,6 +332,17 @@ return {
     misc = {
         dictionary = {
             k_seal_ex = "Seal!"
+        },
+        
+        poker_hand_descriptions = {
+            ["Royal Flush"] = {
+                "A Straight Flush starting with",
+                "an Ace and decreasing in rank",
+            }
+        },
+        
+        poker_hands = {
+            ["Royal Flush"] = "Testing moment"
         }
     }
 }
