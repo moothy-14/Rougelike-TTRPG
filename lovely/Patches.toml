@@ -3,8 +3,6 @@ version = "1.0.0"
 dump_lua = true
 priority = 0
 
-# Jokers.lua functionality
-
 # Empty Antes
 [[patches]]
 [patches.pattern]
@@ -22,6 +20,7 @@ match_indent = true
 overwrite = true
 times = 3
 
+
 # Discard and Hands Patch 
 [[patches]]
 [patches.pattern]
@@ -38,6 +37,7 @@ hands = 1,
 match_indent = true
 overwrite = true
 times = 1
+
 
 # Small & Big Blind Patch
 [[patches]]
@@ -85,6 +85,7 @@ match_indent = true
 overwrite = true
 times = 1
 
+
 #press t to go to to shop patch
 [[patches]]
 [patches.pattern]
@@ -111,3 +112,7 @@ end
 '''
 match_indent = true
 overwrite = false
+
+
+
+
