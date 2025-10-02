@@ -327,11 +327,25 @@ return {
                 }
             }
 
+        },
+
+        Planet = {
+            c_triton = {
+                name="Triton",
+                text={
+                    "{S:0.8}({S:0.8,V:1}lvl.#1#{S:0.8}){} Level up",
+                    "{C:attention}#2#",
+                    "{C:mult}+#3#{} Mult and",
+                    "{C:chips}+#4#{} chips",
+                }
+            }
         }
     },
     misc = {
         dictionary = {
+            k_moon = "Moon",
             k_seal_ex = "Seal!"
+            
         },
         
         poker_hand_descriptions = {
@@ -342,7 +356,7 @@ return {
         },
         
         poker_hands = {
-            ["Royal Flush"] = "Testing moment"
+            ["Royal Flush"] = "Royal Flush"
         }
     }
 }

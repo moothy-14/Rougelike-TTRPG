@@ -1,6 +1,7 @@
 
 assert(SMODS.load_file("jokers.lua"))()
 assert(SMODS.load_file("pokerhands.lua"))()
+assert(SMODS.load_file("planets.lua"))()
 
 SMODS.Atlas{
 	key = 'Jokers',
@@ -24,6 +25,13 @@ SMODS.Atlas{
 	frames = 21,
 	px = 34,
 	py = 35
+}
+
+SMODS.Atlas{
+	key = 'Consumables',
+	path = 'Consumables.png',
+	px = 71,
+	py = 95
 }
 
 SMODS.Back{

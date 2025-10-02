@@ -1,12 +1,9 @@
---- TODO:
---- Make planet card for Royal Flush
-
 SMODS.PokerHand{
     key = "Royal Flush",
     chips = 0,
     mult = 10,
-    l_chips = 45,
-    l_mult = 4,
+    l_chips = 0,
+    l_mult = 1,
     order_offset = 9,
     example = {
         {'D_A', true},
@@ -39,6 +36,8 @@ SMODS.PokerHand{
 SMODS.PokerHand:take_ownership("High Card",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.25,
     order_offset = 0,
     },
 
@@ -48,6 +47,8 @@ SMODS.PokerHand:take_ownership("High Card",
 SMODS.PokerHand:take_ownership("Pair",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.25,
     order_offset = 1,
     },
     true
@@ -56,6 +57,8 @@ SMODS.PokerHand:take_ownership("Pair",
 SMODS.PokerHand:take_ownership("Two Pair",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.25,
     order_offset = 2,
     },
     true
@@ -64,6 +67,8 @@ SMODS.PokerHand:take_ownership("Two Pair",
 SMODS.PokerHand:take_ownership("Three of a Kind",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.5,
     order_offset = 3,
     },
     true
@@ -72,6 +77,8 @@ SMODS.PokerHand:take_ownership("Three of a Kind",
 SMODS.PokerHand:take_ownership("Straight",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.75,
     order_offset = 4,
     },
     true
@@ -80,6 +87,8 @@ SMODS.PokerHand:take_ownership("Straight",
 SMODS.PokerHand:take_ownership("Flush",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.5,
     order_offset = 5,
     },
     true
@@ -88,6 +97,8 @@ SMODS.PokerHand:take_ownership("Flush",
 SMODS.PokerHand:take_ownership("Full House",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.5,
     order_offset = 6,
     },
     true
@@ -96,6 +107,8 @@ SMODS.PokerHand:take_ownership("Full House",
 SMODS.PokerHand:take_ownership("Four of a Kind",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.75,
     order_offset = 7,
     },
     true
@@ -104,6 +117,8 @@ SMODS.PokerHand:take_ownership("Four of a Kind",
 SMODS.PokerHand:take_ownership("Straight Flush",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 1,
     order_offset = 8,
     },
     true
@@ -112,6 +127,8 @@ SMODS.PokerHand:take_ownership("Straight Flush",
 SMODS.PokerHand:take_ownership("Five of a Kind",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.75,
     order_offset = 10,
     },
     true
@@ -120,6 +137,8 @@ SMODS.PokerHand:take_ownership("Five of a Kind",
 SMODS.PokerHand:take_ownership("Flush House",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 1,
     order_offset = 11,
     },
     true
@@ -128,6 +147,8 @@ SMODS.PokerHand:take_ownership("Flush House",
 SMODS.PokerHand:take_ownership("Flush Five",
     {
     chips = 0,
+    l_chips = 0,
+    l_mult = 0.75,
     order_offset = 12,
     },
     true
